@@ -1,7 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
-using AlunoAPI.Data;
+
 using static System.Runtime.InteropServices.JavaScript.JSType;
+using AlunoAPI.Data;
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<AlunoAPIContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("AlunoAPIContext") ?? throw new InvalidOperationException("Connection string 'AlunoAPIContext' not found.")));
@@ -13,8 +14,6 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddDbContext<Data.AlunoContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 builder.Services.AddCors(options =>
 {

@@ -17,17 +17,3 @@ namespace AlunoAPI.Data
         public DbSet<AlunoAPI.Models.Aluno> Aluno { get; set; } = default!;
     }
 }
-
-using Microsoft.EntityFrameworkCore;
-
-namespace AlunoAPI.Data
-{
-    public class AlunoContext : DbContext
-    {
-        public AlunoContext(DbContextOptions<AlunoContext> options) : base(options)
-        {
-        }
-
-        public DbSet<Models.Aluno> Alunos { get; set; }
-    }
-}
