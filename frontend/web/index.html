@@ -2,57 +2,80 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>AlunoAPI Frontend</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistema de Gerenciamento de Alunos</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Gerenciamento de Alunos</h1>
+  <div class="container">
+    <h1><i class="fas fa-user-graduate"></i> Sistema de Gerenciamento de Alunos</h1>
 
-  <!-- Formulário de cadastro -->
-  <section class="form-section">
-    <h2>Cadastrar Novo Aluno</h2>
-    <form id="alunoForm">
-      <input type="text" id="nome" placeholder="Nome" required>
-      <input type="email" id="email" placeholder="Email" required>
-      <input type="text" id="telefone" placeholder="Telefone" required>
-      <button type="submit">Salvar</button>
-    </form>
-  </section>
-
-  <!-- Tabela -->
-  <section class="table-section">
-    <h2>Lista de Alunos</h2>
-    <table id="alunoTable">
-      <thead>
-        <tr>
-          <th>Nome</th>
-          <th>Email</th>
-          <th>Telefone</th>
-          <th>Ações</th>
-        </tr>
-      </thead>
-      <tbody>
-        <!-- Populado via JS -->
-      </tbody>
-    </table>
-  </section>
-
-  <!-- Modal edição -->
-  <div id="editModal" class="modal">
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <h2>Editar Aluno</h2>
-      <form id="editForm">
-        <input type="hidden" id="editId">
-        <input type="text" id="editNome" placeholder="Nome" required>
-        <input type="email" id="editEmail" placeholder="Email" required>
-        <input type="text" id="editTelefone" placeholder="Telefone" required>
-        <button type="submit">Atualizar</button>
+    <!-- Formulário de cadastro -->
+    <section class="form-section">
+      <h2><i class="fas fa-plus-circle"></i> Cadastrar Novo Aluno</h2>
+      <form id="alunoForm">
+        <div class="input-group">
+          <input type="text" id="nome" placeholder="Nome completo" required>
+          <i class="fas fa-user input-icon"></i>
+        </div>
+        <div class="input-group">
+          <input type="email" id="email" placeholder="E-mail" required>
+          <i class="fas fa-envelope input-icon"></i>
+        </div>
+        <div class="input-group">
+          <input type="text" id="telefone" placeholder="Telefone" required>
+          <i class="fas fa-phone input-icon"></i>
+        </div>
+        <button type="submit"><i class="fas fa-save"></i> Salvar</button>
       </form>
+    </section>
+
+    <!-- Tabela -->
+    <section class="table-section">
+      <h2><i class="fas fa-list"></i> Lista de Alunos</h2>
+      <div class="table-container">
+        <table id="alunoTable">
+          <thead>
+            <tr>
+              <th>Aluno</th>
+              <th>Email</th>
+              <th>Telefone</th>
+              <th>Ações</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Populado via JS -->
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Modal edição -->
+    <div id="editModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2><i class="fas fa-edit"></i> Editar Aluno</h2>
+        <form id="editForm">
+          <input type="hidden" id="editId">
+          <div class="input-group">
+            <input type="text" id="editNome" placeholder="Nome" required>
+            <i class="fas fa-user input-icon"></i>
+          </div>
+          <div class="input-group">
+            <input type="email" id="editEmail" placeholder="Email" required>
+            <i class="fas fa-envelope input-icon"></i>
+          </div>
+          <div class="input-group">
+            <input type="text" id="editTelefone" placeholder="Telefone" required>
+            <i class="fas fa-phone input-icon"></i>
+          </div>
+          <button type="submit"><i class="fas fa-sync-alt"></i> Atualizar</button>
+        </form>
+      </div>
     </div>
   </div>
 
   <script src="script.js"></script>
 </body>
 </html>
-
