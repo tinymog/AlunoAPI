@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35707.178 d17.12
+VisualStudioVersion = 17.12.35707.178
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlunoAPI", "AlunoAPI.csproj", "{6D86061D-E242-42AF-A033-19A0CB5A88AA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoreBusiness", "..\CoreBusiness\CoreBusiness.csproj", "{DA29425C-D750-4C33-BD14-85018EFE77EC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{6D86061D-E242-42AF-A033-19A0CB5A88AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6D86061D-E242-42AF-A033-19A0CB5A88AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6D86061D-E242-42AF-A033-19A0CB5A88AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA29425C-D750-4C33-BD14-85018EFE77EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA29425C-D750-4C33-BD14-85018EFE77EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA29425C-D750-4C33-BD14-85018EFE77EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA29425C-D750-4C33-BD14-85018EFE77EC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
-using AlunoAPI.Models;
+using CoreBusiness.Entities;
 
 namespace AlunoAPI.Data
 {
@@ -14,6 +14,8 @@ namespace AlunoAPI.Data
         {
         }
 
-        public DbSet<AlunoAPI.Models.Aluno> Aluno { get; set; } = default!;
+        public DbSet<CoreBusiness.Entities.Aluno> Aluno { get; set; } = default!;
+        public DbSet<CoreBusiness.Entities.Escola> Escola { get; set; } = default!;
+        public DbSet<CoreBusiness.Entities.Professor> Professor { get; set; } = default!;
     }
 }

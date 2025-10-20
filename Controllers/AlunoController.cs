@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using AlunoAPI.Data;
-using AlunoAPI.Models;
+using CoreBusiness.Entities;
 
 namespace AlunoAPI.Controllers
 {
@@ -78,7 +73,7 @@ namespace AlunoAPI.Controllers
         [HttpPost]
         public async Task<ActionResult<Aluno>> PostAluno(Aluno aluno)
         {
-            _context.Aluno.Add(aluno);
+            Microsoft.EntityFrameworkCore.ChangeTracking.EntityEntry<CoreBusiness.Entities.Aluno> entityEntry = _context.Aluno.Add(aluno);
             await _context.SaveChangesAsync();
 
             return CreatedAtAction("GetAluno", new { id = aluno.Id }, aluno);
